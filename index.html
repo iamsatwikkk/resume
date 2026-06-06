@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satwik Som — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">SS<span class="dot"></span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Certs</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about"    class="mob-link">About</a></li>
+      <li><a href="#skills"   class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#certs"    class="mob-link">Certs</a></li>
+      <li><a href="#resume"   class="mob-link">Resume</a></li>
+      <li><a href="#contact"  class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text">SATWIK</div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="photo-ring"></div>
+        <img src="img.jpeg" alt="Satwik Som" class="hero-photo" id="heroPhoto"
+             onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex'" />
+        <div class="photo-fallback" id="photoFallback">SS</div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-tag reveal-word">Computer Science Engineer</p>
+        <h1 class="hero-name">
+          <span class="line-wrap"><span class="reveal-line">Satwik</span></span>
+          <span class="line-wrap"><span class="reveal-line delay-1">Som</span></span>
+        </h1>
+        <p class="hero-sub reveal-word delay-2">Building elegant software &amp; crafting digital experiences that matter.</p>
+        <div class="hero-cta reveal-word delay-3">
+          <a href="#projects" class="btn-primary">View Work</a>
+          <a href="#contact"  class="btn-ghost">Get In Touch</a>
+        </div>
+        <div class="hero-social reveal-word delay-4">
+          <a href="https://github.com/iamsatwikkk" target="_blank" class="social-pill">GitHub</a>
+          <a href="https://www.linkedin.com/in/satwik-som-69907b310" target="_blank" class="social-pill">LinkedIn</a>
+          <span class="cgpa-badge">9+ GPA</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-title">Who I Am</h2>
+        <div class="about-accent-bar"></div>
+      </div>
+      <div class="about-right">
+        <p class="about-lead">I'm a <em>Computer Science student</em> at Vellore Institute of Technology, expected to graduate in 2028. I live at the intersection of engineering rigour and design sensibility.</p>
+        <p class="about-body">Maintaining a strong academic record, I build things that are fast, beautiful, and purposeful — from browser platforms to product review sites and merch stores. I care deeply about open-source, clean architecture, and products that feel good to use.</p>
+        <div class="edu-card">
+          <div class="edu-header">
+            <span class="edu-degree">B.Tech — Computer Science &amp; Engineering</span>
+            <span class="edu-year">2024 — 2028</span>
+          </div>
+          <div class="edu-school">Vellore Institute of Technology</div>
+          <div class="edu-courses">DSA · DBMS · OS · Computer Networks · OOP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="section-label">02 — Skills</div>
+    <h2 class="section-title">Technical Arsenal</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-cat="Languages">
+        <div class="skill-icon">{ }</div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span>C</span><span>C++</span><span>Java</span><span>Python</span><span>JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card" data-cat="Frontend">
+        <div class="skill-icon">⬡</div>
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span>React.js</span><span>HTML5</span><span>CSS3</span>
+        </div>
+      </div>
+      <div class="skill-card" data-cat="Tools">
+        <div class="skill-icon">⚙</div>
+        <h3>Tools</h3>
+        <div class="skill-tags">
+          <span>Git</span><span>GitHub</span><span>VS Code</span>
+        </div>
+      </div>
+      <div class="skill-card" data-cat="Databases">
+        <div class="skill-icon">◈</div>
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span>MySQL</span><span>Firebase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="section-label">03 — Projects</div>
+    <h2 class="section-title">What I've Built</h2>
+    <div class="projects-list">
+
+      <!-- 01 Vyom Browser -->
+      <div class="project-item" data-link="https://vyom-psi.vercel.app">
+        <div class="project-num">01</div>
+        <div class="project-info">
+          <div class="project-title-row">
+            <h3 class="project-name">Vyom Browser Platform</h3>
+            <span class="project-status live">Live ↗</span>
+          </div>
+          <p class="project-stack">React.js · JavaScript</p>
+          <p class="project-desc">A browser platform inspired by modern web browsers with a focus on speed and usability. Features a responsive UI and a lightweight, user-first browsing experience.</p>
+          <ul class="project-bullets">
+            <li>Responsive UI built from scratch in React.js</li>
+            <li>Lightweight, performant browsing core</li>
+            <li>Modern UX patterns with user-centric design</li>
+          </ul>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <!-- 02 Sony WH-CH520 Review -->
+      <div class="project-item" data-link="https://iamsatwikkk.github.io/product-review">
+        <div class="project-num">02</div>
+        <div class="project-info">
+          <div class="project-title-row">
+            <h3 class="project-name">Sony WH-CH520 — Product Review</h3>
+            <span class="project-status live">Live ↗</span>
+          </div>
+          <p class="project-stack">HTML · CSS · JavaScript</p>
+          <p class="project-desc">An in-depth product review page for the Sony WH-CH520 Wireless Headphones — crafted as a polished, interactive web experience with detailed specs, sound analysis, and a verdict section.</p>
+          <ul class="project-bullets">
+            <li>Full product breakdown: design, sound, battery, connectivity</li>
+            <li>Smooth scroll animations and interactive UI components</li>
+            <li>Recognised by Sony India Software Centre for clean UI &amp; presentation</li>
+          </ul>
+          <!-- SONY REPLY CARD -->
+          <div class="sony-reply-card">
+            <div class="sony-reply-header">
+              <div class="sony-logo-box">
+                <svg viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg" width="44" height="15">
+                  <text x="0" y="16" font-family="'Arial Black',sans-serif" font-weight="900" font-size="18" fill="white">SONY</text>
+                </svg>
+              </div>
+              <div class="sony-reply-meta">
+                <span class="sony-sender">Sony India Software Centre</span>
+                <span class="sony-time">2:34 PM</span>
+              </div>
+            </div>
+            <p class="sony-reply-text">
+              "Hi Satwik, thanks for sharing your project with us. We had a look at it and really liked the <strong>clean UI and overall presentation</strong> — great effort! Keep building and improving. Wishing you all the best for your future projects."
+            </p>
+            <span class="sony-reply-badge">Official Reply</span>
+          </div>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <!-- 03 Riot Merch -->
+      <div class="project-item" data-link="https://riot-merch.vercel.app">
+        <div class="project-num">03</div>
+        <div class="project-info">
+          <div class="project-title-row">
+            <h3 class="project-name">Riot Merch — Fan Store Concept</h3>
+            <span class="project-status live">Live ↗</span>
+          </div>
+          <p class="project-stack">HTML · CSS · JavaScript</p>
+          <p class="project-desc">A fan-made merchandise store concept for Riot Games — the studio behind VALORANT, League of Legends, and more. Built as a sleek, game-inspired storefront with product cards, a cart flow, and brand-faithful visuals.</p>
+          <ul class="project-bullets">
+            <li>Game-inspired dark UI with Riot brand aesthetics</li>
+            <li>Product grid with hover effects and interactive cart</li>
+            <li>Fully responsive across devices</li>
+          </ul>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+
+      <!-- More coming -->
+      <div class="project-item project-coming">
+        <div class="project-num">04</div>
+        <div class="project-info">
+          <h3 class="project-name">More Coming Soon</h3>
+          <p class="project-desc">Currently building new projects. Stay tuned.</p>
+        </div>
+        <div class="project-arrow">…</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section class="section certs" id="certs">
+    <div class="section-label">04 — Certifications</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="certs-grid">
+      <div class="cert-card" onclick="openModal('1.png','NPTEL Certificate I')">
+        <div class="cert-img-wrap">
+          <img src="1.png" alt="NPTEL Certificate 1"
+               onerror="this.parentElement.innerHTML='<div class=cert-placeholder>NPTEL</div>'" />
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-provider nptel">NPTEL</span>
+          <p class="cert-name">Certificate I</p>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openModal('2.png','NPTEL Certificate II')">
+        <div class="cert-img-wrap">
+          <img src="2.png" alt="NPTEL Certificate 2"
+               onerror="this.parentElement.innerHTML='<div class=cert-placeholder>NPTEL</div>'" />
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-provider nptel">NPTEL</span>
+          <p class="cert-name">Certificate II</p>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openModal('3.png','Udemy Course Certificate')">
+        <div class="cert-img-wrap">
+          <img src="3.png" alt="Udemy Certificate"
+               onerror="this.parentElement.innerHTML='<div class=cert-placeholder>Udemy</div>'" />
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-provider udemy">Udemy</span>
+          <p class="cert-name">Course Certificate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="section resume-section" id="resume">
+    <div class="section-label">05 — Resume</div>
+    <h2 class="section-title">My Resume</h2>
+    <div class="resume-inner">
+      <div class="resume-left">
+        <p class="resume-desc">Want the full picture? Download my resume or view it directly — one click to everything you need to know about my background, skills, and projects.</p>
+      </div>
+      <div class="resume-actions">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="resume-btn resume-btn-primary" id="resumeViewBtn">
+          <span class="resume-btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </span>
+          View Resume
+        </a>
+        <a href="#" download class="resume-btn resume-btn-ghost" id="resumeDownloadBtn">
+          <span class="resume-btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </span>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience" id="experience">
+    <div class="section-label">06 — Experience</div>
+    <h2 class="section-title">Leadership &amp; Volunteering</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-org">Mozilla Firefox Club, VIT</span>
+            <span class="tl-role">Core Member</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Contributed to technical initiatives &amp; club activities</li>
+            <li>Assisted in organizing community and tech-focused events</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-org">E-Cell Summit '25</span>
+            <span class="tl-role">Volunteer</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Assisted in event coordination &amp; participant management</li>
+            <li>Supported smooth execution of activities during the summit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <span class="tl-org">GraVITas 2025</span>
+            <span class="tl-role">Volunteer</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Collaborated with organizing teams to manage event operations</li>
+            <li>Contributed to participant engagement and logistics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section interests" id="interests">
+    <div class="section-label">07 — Interests</div>
+    <h2 class="section-title">What Drives Me</h2>
+    <div class="interests-marquee-wrap">
+      <div class="interests-marquee">
+        <span>Software Development</span><span class="sep">✦</span>
+        <span>Web Technologies</span><span class="sep">✦</span>
+        <span>Open Source</span><span class="sep">✦</span>
+        <span>Product Design</span><span class="sep">✦</span>
+        <span>Competitive Gaming</span><span class="sep">✦</span>
+        <span>Software Development</span><span class="sep">✦</span>
+        <span>Web Technologies</span><span class="sep">✦</span>
+        <span>Open Source</span><span class="sep">✦</span>
+        <span>Product Design</span><span class="sep">✦</span>
+        <span>Competitive Gaming</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section-label">08 — Contact</div>
+    <div class="contact-inner">
+      <h2 class="contact-big">Let's<br/><em>Connect</em></h2>
+      <div class="contact-details">
+        <a href="mailto:ssom.udp2005@gmail.com" class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">ssom.udp2005@gmail.com</span>
+        </a>
+        <a href="tel:+919366898168" class="contact-item">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 93668 98168</span>
+        </a>
+        <a href="https://github.com/iamsatwikkk" target="_blank" class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/iamsatwikkk</span>
+        </a>
+        <a href="https://www.linkedin.com/in/satwik-som-69907b310" target="_blank" class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/satwik-som-69907b310</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">Satwik Som</div>
+    <div class="footer-center">Designed &amp; Developed by Satwik Som</div>
+    <div class="footer-right">Built with HTML · CSS · JS</div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img src="" alt="" id="modalImg" />
+      <p id="modalCaption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
