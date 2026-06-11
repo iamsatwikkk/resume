@@ -599,7 +599,33 @@ body:has(button:hover) .cursor { width: 28px; height: 28px; }
 
 /* ===== CERTS ===== */
 .certs-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+/* Row 2: 2 cards centred */
+.certs-grid .cert-card:nth-child(4) { grid-column: 1 / 2; }
+.certs-grid .cert-card:nth-child(5) { grid-column: 2 / 3; }
+
+@media (max-width: 860px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .certs-grid .cert-card:nth-child(4) { grid-column: auto; }
+  .certs-grid .cert-card:nth-child(5) { grid-column: auto; }
+  /* 5th card spans full width on 2-col so nothing is orphaned awkwardly */
+  .certs-grid .cert-card:nth-child(5):last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 320px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+  .certs-grid .cert-card:nth-child(n) { grid-column: auto; }
 }
 .cert-card {
   border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
@@ -632,8 +658,10 @@ body:has(button:hover) .cursor { width: 28px; height: 28px; }
   font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em;
   text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
 }
-.cert-provider.nptel { background: rgba(77,159,255,0.15); color: var(--accent3); border: 1px solid rgba(77,159,255,0.2); }
-.cert-provider.udemy { background: rgba(232,213,163,0.1); color: var(--accent); border: 1px solid rgba(232,213,163,0.2); }
+.cert-provider.nptel    { background: rgba(77,159,255,0.15);  color: var(--accent3);  border: 1px solid rgba(77,159,255,0.2); }
+.cert-provider.udemy    { background: rgba(232,213,163,0.1);  color: var(--accent);   border: 1px solid rgba(232,213,163,0.2); }
+.cert-provider.hubspot  { background: rgba(255,122,66,0.12);  color: #ff7a42;         border: 1px solid rgba(255,122,66,0.25); }
+.cert-provider.other    { background: rgba(77,255,145,0.08);  color: var(--green);    border: 1px solid rgba(77,255,145,0.2); }
 .cert-name { font-size: 0.85rem; font-weight: 600; color: var(--text-dim); }
 
 /* ===== TIMELINE ===== */
